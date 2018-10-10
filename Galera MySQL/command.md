@@ -1,4 +1,5 @@
 ### Galera Cluster command
+
 1. Bootstrapping a New Cluster
 Khởi động node đầu tiên trong cluster với option --wsrep-new-cluster:
 ```
@@ -10,3 +11,6 @@ Nếu node đầu tiên có địa chỉ IP là 10.10.1.11, thì để thêm nod
 $ mysqld --wsrep_cluster_address=gcomm://10.10.1.11  # DNS names work as well, IP is preferred for performance
 ```
 > Nếu node bị lỗi mất đồng bộ, không recovery được, cũng có thể dùng lệnh này để join và sync dữ liệu lại
+
+### Link tham khảo
+[Getting started with mariadb galera cluseter](https://mariadb.com/kb/en/library/getting-started-with-mariadb-galera-cluster/)
