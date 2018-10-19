@@ -1,4 +1,4 @@
-### > Host OS: Ubuntu 16.04.5 LTS
+### Host OS: Ubuntu 16.04.5 LTS
 
 ### Cấu hình galera tham khảo
 ```
