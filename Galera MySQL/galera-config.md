@@ -63,4 +63,15 @@ ms db-master db \
 ```
 > checkst là user của mariadb dùng để check
 
+3. Quản lý cluster qua GUI
+   - Cài đặt pcsd
+   ```
+      $ apt install pcsd
+      $ service pcsd restart
+   ```
+   - Để đăng nhập, set password cho user hacluster
+   - Đăng nhập GUI bằng địa chỉ
+   > https://your-ip:2224
+   
+
 
