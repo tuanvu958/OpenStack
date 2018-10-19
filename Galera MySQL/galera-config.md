@@ -74,7 +74,7 @@ ms db-master db \
      $ passwd hacluster
      ```
    - Đăng nhập GUI bằng địa chỉ
-   > https://your-ip:2224
+     > https://your-ip:2224
    
 
 
