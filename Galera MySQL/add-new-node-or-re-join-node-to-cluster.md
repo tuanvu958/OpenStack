@@ -3,7 +3,7 @@
 - Một node trong cluster bị lỗi, không thể add lại vào Cluster (mysql ko thể khởi động dc).
 
 ### Phương pháp
->Sử dụng mariabackup
+  >Sử dụng mariabackup
 1. Cài đặt mariabackup
    ```
    sudo apt-get install mariadb-backup
