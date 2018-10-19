@@ -65,11 +65,14 @@ ms db-master db \
 
 3. Quản lý cluster qua GUI
    - Cài đặt pcsd
-   ```
-      $ apt install pcsd
-      $ service pcsd restart
-   ```
+     ```
+     $ apt install pcsd
+     $ service pcsd restart
+     ```
    - Để đăng nhập, set password cho user hacluster
+     ```
+     $ passwd hacluster
+     ```
    - Đăng nhập GUI bằng địa chỉ
    > https://your-ip:2224
    
