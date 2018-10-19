@@ -38,3 +38,27 @@ encrypt=3
 tkey=/etc/mysql/ssl/keyfile.pem
 tcert=/etc/mysql/ssl/certfile.pem
 ```
+
+### Cấu hình pacemaker
+1. Tắt tự khởi động dịch vụ mysql
+```
+$ systemctl disable mariadb.service 
+$ systemctl disable mysql
+```
+2. Cấu hình pacemaker
+```
+primitive db galera \
+        params enable_creation=true wsrep_cluster_address="gcomm://controller01,controller02,controller03" check_user=checkst check_passwd=atarasiserver pid="/var/run/mysqld/mysqld.pid" socket="/var/run/mysqld/mysqld.sock" \
+        op start interval=0s timeout=120 \
+        op stop interval=0s timeout=120 \
+        op monitor interval=20 timeout=30 \
+        op monitor interval=10 role=Master timeout=30 \
+        op monitor interval=30 role=Slave timeout=30 \
+        op promote interval=0s timeout=300 \
+        op demote interval=0s timeout=120
+ms db-master db \
+        meta master-max=3
+```
+> checkst là user của mariadb dùng để check
+
+
