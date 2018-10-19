@@ -61,6 +61,10 @@ primitive db galera \
 ms db-master db \
         meta master-max=3
 ```
+Khởi động resource VirtualIP cùng node với DB Master (tránh trờng hợp vIP ở trên Node ở trạng thái Slave)
+```
+$ pcs constraint colocation add vips with master db-master
+```
 > checkst là user của mariadb dùng để check
 
 3. Quản lý cluster qua GUI
